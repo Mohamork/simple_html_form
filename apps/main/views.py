@@ -9,4 +9,5 @@ def get_color(request) :
         if form.is_valid() :
             return HttpResponseRedirect('/result')
     else:
-        form = ColorForm()    
+        form = ColorForm()
+    return render(request,'color.html',{'form':form})        
